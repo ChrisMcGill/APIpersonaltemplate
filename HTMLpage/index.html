@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Document</title>
+</head>
+<body>
+    <h1>Sample H1</h1>
+    
+    <button onclick="getSample()">Get sample</button>
+    
+    <script>
+        'use strict';
+
+        const URL = "http://localhost:5000/api/";
+
+        function getSample(){
+            console.log("Getting all");
+
+            let req = new XMLHttpRequest();
+            req.onreadystatechange = function () {
+                if (this.readyState === XMLHttpRequest.DONE && this.status ===200){
+                    let response = JSON.parse(this.response);
+                    console.log(response.status);
+                    console.log(response.statusText);
+                    console.log(response.data);
+                }
+            };
+            req.open("GET", URL);
+            req.send();
+        }
+
+    </script>
+</body>
+</html>

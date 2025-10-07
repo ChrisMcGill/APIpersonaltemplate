@@ -3,12 +3,16 @@ let express = require('express');
 let app = express();
 let pieRepo = require('./repos/pieRepo');
 let errorHelper = require('./helpers/errorHelpers');
+let cors = require('cors');
 
 // use express router object
 let router = express.Router();
 
 //configure middleware to support json data
 app.use(express.json());
+
+//configure cors
+app.use(cors());
 
 //create GET to return array
 router.get('/', function (req, res, next){
