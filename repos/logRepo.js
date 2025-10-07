@@ -1,12 +1,11 @@
-const { FILE } = require('dns');
 let fs = require('fs');
 
-const FILE_NAME = './logs/log.txt';
+const FILE_NAME = './logs/logs.txt';
 
 let logRepo = {
     write: function (data, resolve, reject){
         let toWrite = "*".repeat(80) + "\r\n";
-        toWrite += "DateTime: " + new Date().toLocaleDateString() + "\r\n";;
+        toWrite += "DateTime: " + new Date().toLocaleDateString() + "\r\n";
         toWrite += "Exception Info: " + JSON.stringify(data) + "\r\n";
         toWrite += "*".repeat(80) + "\r\n"; 
 

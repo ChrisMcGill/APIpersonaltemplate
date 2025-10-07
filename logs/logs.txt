@@ -1,0 +1,4 @@
+********************************************************************************
+DateTime: 07/10/2025
+Exception Info: {"status":500,"statusText":"internal server error","message":"ENOENT: no such file or directory, open 'E:\\Code\\APIs\\APIpersonaltemplate\\assets\\piess.json'","error":{"errno":-4058,"call":"open","code":"INTERNAL_SERVER_ERROR","message":"ENOENT: no such file or directory, open 'E:\\Code\\APIs\\APIpersonaltemplate\\assets\\piess.json'"},"requestInfo":{"hostnmame":"localhost","path":"/api/"}}
+********************************************************************************
